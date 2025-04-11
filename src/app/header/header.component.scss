@@ -1,0 +1,80 @@
+@import '../../variables.scss';
+
+@keyframes scale {
+    from {
+        transform: translateY(0px) scale(1);
+    }
+    to {
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+header {
+    background-image: url('../../../public/bg\ \(5\).png');
+    height: 60dvh;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1240px;
+        margin: auto;
+        padding: 4dvh;
+
+        .nav-icons {
+
+            i {
+                color: $branco;
+                margin-right: 2dvh;
+                transition: color .9s;
+            }
+
+            i:hover {
+                color: $rojoFuego;
+                animation:  scale 1s alternate infinite;
+            }
+        }
+
+        .logo {
+
+            i {
+                color: $branco;
+                font-size: 2rem;
+            }
+        }
+
+        button {
+            background-color: transparent;
+            border: 1px solid $branco;
+            border-radius: 1dvh;
+            color: $branco;
+            width: 15dvh;
+            height: 5dvh;
+            transition: border .9s;
+        }
+
+        button:hover {
+            border: 2px solid $rojoFuego;
+        }
+    }
+
+    .main-title {
+        color: $branco;
+        text-align: center;
+        margin-top: 2dvh;
+    }
+
+    .opening-hours {
+        font-size: 1rem;
+        font-family: 'Poppins', serif, Arial;
+        color: $branco;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 2dvh;
+        background-color: $verdeEsmeralda;
+        width: 40dvh;
+        height: 5dvh;
+        border-radius: 2dvh;
+    }
+}

@@ -1,0 +1,269 @@
+@import '../../variables.scss';
+@import '../../app/cardapio/responsivity.scss';
+
+main {
+    max-width: 1240px;
+    margin: auto;
+
+    .menu {
+        margin-top: 10dvh;
+
+        h2 {
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 5dvh;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2dvh;
+            padding: 2dvh 2dvh;
+    
+            .card {
+                display: flex;
+                border-radius: 2dvh;
+                box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+                overflow: hidden;
+                height: 50dvh;
+    
+                div {
+                    flex: 1;
+                }
+                
+                img {
+                    object-fit: cover;
+                    height: 50dvh;
+                    width: 100%;
+                    transition: transform .9s;
+                    filter: brightness(50%);
+                    
+                }
+    
+                img:hover {
+                    transform: scale(1.1);
+                }
+    
+                .card-body {
+                    padding-left: 5dvh;
+                    background-color: $branco;
+    
+                    .card-title {
+                        color: $chocolate;
+                        margin-bottom: 2dvh;
+                        text-align: center;
+                    }
+    
+                    .card-paragraph {
+                        line-height: 2rem;
+                    }
+    
+                    .card-info {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 2dvh;
+    
+                        .card-price {
+                            font-weight: 500;
+                        }
+    
+                        .add-to-cart-btn {
+                            margin-right: 2dvh;
+                            width: 7dvh;
+                            height: 7dvh;
+                            border: none;
+                            border-radius: 1dvh;
+                            color: $branco;
+                            background-color: $chocolate;
+                            transition: background-color .9s;
+                        }
+    
+                        .add-to-cart-btn:hover {
+                            background-color: $rojoFuego;
+                        }
+
+                        .dish-rate {
+                            display: flex;
+                            justify-content: flex-start;
+                            margin-bottom: 1dvh;
+    
+                            i {
+                                color: $amarillo;
+                            }
+    
+                            span {
+                                font-family: 'Poppins', serif;
+                                font-size: 1rem;
+                                color: $chocolate;
+                                margin-left: 1dvh;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .menu-btn {
+            display: flex;
+            justify-content: center;
+            margin: 5dvh 5dvh;
+
+            a {
+                font-size: 1.5rem;
+                transition: color .9s;
+            }
+
+            a:hover {
+                color: $naranjaPicante;
+            }
+        }
+    }
+
+    @media (width >=1024px) {
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr) !important;
+
+            .card {
+                display: flex;
+                flex-direction: row;
+
+                .card-img {
+                    img {
+                        width: 100%;
+                        height: 50dvh !important;
+                        object-fit: cover !important;
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cart-modal-button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2dvh;
+
+    span {
+        font-size: 1rem;
+    }
+
+    #cart-btn {
+        width: 40dvh;
+        height: 5dvh;
+        border: 1px solid;
+        border-radius: 1dvh;
+        background-color: $preto;
+        color: $branco;
+        transition: border 1s;
+    }
+
+    #cart-btn:hover {
+        border: 2px solid $amarilloSol;
+    }
+}
+
+.fullscreen {
+    position: fixed;
+    z-index: 20;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100dvh;
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0 / 0.4);
+
+    .carrinho {
+        background-color: $naranjaPicante;
+        min-width: 90%;
+        border-radius: 2dvh;
+        text-align: center;
+        font-weight: bold;
+        margin: 1dvh 1dvh;
+
+        h2 {
+            margin-top: 1dvh;
+        }
+
+        #cart-items-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin: 1dvh 1dvh;
+
+            .remove-from-cart-btn {
+                border: none;
+                transition: border .9s;
+                background-color: transparent;
+                transition: color 1s;
+            }
+
+            .remove-from-cart-btn:hover {
+                color: $amarilloSol;
+            }
+        }
+
+        p {
+            font-weight: bold;
+
+            span {
+                font-size: 1.2rem;
+            }
+        }
+
+        #address {
+            width: 90%;
+            padding: 1dvh 1dvh;
+            border: none;
+            border-radius: 1dvh;
+        }
+
+        #address-warn {
+            color: rgb(201, 62, 62);
+            font-weight: 500;
+            display: none;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 1dvh;
+            gap: 3dvh;
+
+            .close-modal-btn {
+                border: none;
+                transition: color 1s;
+                background-color: transparent;
+            }
+
+            .close-modal-btn:hover {
+                color: $rojoFuego;
+            }
+
+            .checkout-btn {
+                background-color: transparent;
+                color: $branco;
+                padding: 1dvh 1dvh;
+                border: none;
+                transition: color 1s;
+            }
+
+            .checkout-btn:hover {
+                color: $amarilloSol;
+            }
+        }
+    }
+}

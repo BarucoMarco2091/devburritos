@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@keyframes scale {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 7dvh 7dvh;
+}
+footer .footer-icons {
+  margin-bottom: 4dvh;
+}
+footer .footer-icons i {
+  margin-right: 3dvh;
+  transition: color 0.9s;
+  color: #FFFFFF;
+}
+footer .footer-icons i:hover {
+  color: #E3170A;
+  animation: scale 1s infinite alternate;
+}
+footer .footer-logo {
+  margin-bottom: 4dvh;
+}
+footer .footer-logo i {
+  color: #FFFFFF;
+  font-size: 2rem;
+}
+footer .footer-info {
+  margin-bottom: 4dvh;
+}
+footer .footer-info p {
+  color: #FFFFFF;
+}/*# sourceMappingURL=footer.component.css.map */

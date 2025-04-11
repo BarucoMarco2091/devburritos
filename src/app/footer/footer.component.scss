@@ -1,0 +1,52 @@
+@import '../../variables.scss';
+@import '../footer/responsivity.scss';
+
+@keyframes scale {
+    from {
+        transform: translateY(0) scale(1);
+    }
+
+    to {
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 7dvh 7dvh;
+
+    .footer-icons {
+        margin-bottom: 4dvh;
+
+        i {
+            margin-right: 3dvh;
+            transition: color .9s;
+            color: $branco;
+        }
+
+        i:hover {
+            color: $rojoFuego;
+            animation: scale 1s infinite alternate;
+        }
+    }
+
+    .footer-logo {
+        margin-bottom: 4dvh;
+
+        i {
+            color: $branco;
+            font-size: 2rem;
+        }
+    }
+
+    .footer-info {
+        margin-bottom: 4dvh;
+
+        p {
+            color: $branco;
+        }
+    }
+}

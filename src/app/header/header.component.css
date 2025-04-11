@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@keyframes scale {
+  from {
+    transform: translateY(0px) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+header {
+  background-image: url("../../../public/bg (5).png");
+  height: 60dvh;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: auto;
+  padding: 4dvh;
+}
+header nav .nav-icons i {
+  color: #FFFFFF;
+  margin-right: 2dvh;
+  transition: color 0.9s;
+}
+header nav .nav-icons i:hover {
+  color: #E3170A;
+  animation: scale 1s alternate infinite;
+}
+header nav .logo i {
+  color: #FFFFFF;
+  font-size: 2rem;
+}
+header nav button {
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 1dvh;
+  color: #FFFFFF;
+  width: 15dvh;
+  height: 5dvh;
+  transition: border 0.9s;
+}
+header nav button:hover {
+  border: 2px solid #E3170A;
+}
+header .main-title {
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 2dvh;
+}
+header .opening-hours {
+  font-size: 1rem;
+  font-family: "Poppins", serif, Arial;
+  color: #FFFFFF;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 2dvh;
+  background-color: #2A9D8F;
+  width: 40dvh;
+  height: 5dvh;
+  border-radius: 2dvh;
+}/*# sourceMappingURL=header.component.css.map */
